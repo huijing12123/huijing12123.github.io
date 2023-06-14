@@ -1,49 +1,71 @@
-.titleBox {
-    // 让title居中
-    display: flex;
-    justify-content: center;
-    /* 水平居中 */
-    align-items: center;
-    /* 垂直居中 */
-
-    // 让div始终显示在最前面
-    position: fixed;
-    z-index: 200;
-
-    width: 100%;
-
-
-    .title {
-        color: #eebbc3;
-        font-size: 60px;
-
-        .strokeText {
-            // 内部描边效果
-            -webkit-text-stroke-width: 4px;
-            -webkit-text-stroke-color: #121629;
-            /* 外部描边效果*/
-            text-shadow: 6px 6px 6px #121629;
-
-        }
-    }
-}
-
-
-
 .backBox {
     // 固定盒子 父盒子是body
     position: fixed;
-    top: 45%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    width: 480px;
+    width: 800px;
     height: 300px;
     padding: 40px;
 
     background-color: #b8c1ec;
     border: 10px solid #121629;
     box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
+
+    .boxContainTitle {
+        left: 0;
+        top: 5px;
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+
+        width: 880px;
+        height: 60px;
+        padding: 5px;
+
+        border-bottom: 10px solid #121629;
+
+        .circleStyle {
+            width: 50px;
+            aspect-ratio: 1/1;
+        }
+
+        .titleBox {
+            // 让title居中
+            display: flex;
+            justify-content: center;
+            /* 水平居中 */
+            align-items: center;
+            /* 垂直居中 */
+
+            // 让div始终显示在最前面
+            position: relative;
+            z-index: 200;
+
+            width: 100%;
+
+            // top: -55px;
+            // right: -70px;
+
+
+            .title {
+                color: #121629;
+                font-size: 60px;
+
+                .strokeText {
+                    // 内部描边效果
+                    // -webkit-text-stroke-width: 4px;
+                    // -webkit-text-stroke-color: #121629;
+                    /* 外部描边效果*/
+                    text-shadow: 8px 0px 0px #eebbc3;
+
+                }
+            }
+        }
+    }
 
 }
 
@@ -58,7 +80,7 @@
     left: 43%;
     transform: translate(-50%, -50%);
 
-    width: 480px;
+    width: 800px;
     height: 300px;
     padding: 40px;
 
@@ -76,16 +98,18 @@
         aspect-ratio: 618/611;
 
         box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
- 
+
         // 动画效果 放大
         transition: transform 0.5s ease;
 
     }
 
     .imgMe:hover {
-        cursor: pointer;
         // 动画效果 放大
-        transform: scale(1.2);
+        transform: scale(1.1);
+
+        cursor: pointer;
+
     }
 
     .catsBox {
@@ -95,7 +119,7 @@
         margin-top: 40px;
 
         width: 60%;
-        height: 300px;
+        height: 350px;
 
         .box {
             // 每个 <div> 将成为图片容器
@@ -125,49 +149,49 @@
 
 // 每个猫猫照独特的style
 .abaoImgStyle {
-    width: 60%;
+    width: 40%;
     // transform: rotate(-20deg);
 }
 
 .heihuImgStyle {
-    width: 70%;
+    width: 50%;
     transform: rotate(30deg);
 }
 
 
 
 .qiuqiuImgStyle {
-    width: 50%;
+    width: 30%;
     transform: rotate(-15deg);
 }
 
 .xiaoheiImgStyle {
-    width: 60%;
+    width: 40%;
     transform: rotate(30deg);
 }
 
 .xiaoheiziImgStyle {
-    width: 80%;
+    width: 60%;
     // transform: rotate(20deg);
 }
 
 .memeImgStyle {
-    width: 60%;
+    width: 40%;
     transform: rotate(-20deg);
 }
 
 .xiaohuaImgStyle {
-    width: 60%;
+    width: 40%;
     transform: rotate(-20deg);
 }
 
 .yinyuanImgStyle {
-    width: 70%;
+    width: 50%;
     transform: rotate(20deg);
 }
 
 .yuanbaoImgStyle {
-    width: 60%;
+    width: 40%;
     transform: rotate(-15deg);
 }
 
@@ -176,8 +200,10 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-120%, -190%);
+    transform: translate(-200%, -250%);
     z-index: 200;
+
+
 }
 
 // 包裹图片的 a 的样式 linkImage 包裹住了imgMe
@@ -186,4 +212,4 @@
     width: 40%;
     aspect-ratio: 618/611;
     margin-right: 10px;
-  }
+}

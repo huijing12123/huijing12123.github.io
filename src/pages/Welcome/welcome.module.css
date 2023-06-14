@@ -1,34 +1,49 @@
-.titleBox {
-  display: flex;
-  justify-content: center;
-  /* 水平居中 */
-  align-items: center;
-  /* 垂直居中 */
-  position: fixed;
-  z-index: 200;
-  width: 100%;
-}
-.titleBox .title {
-  color: #eebbc3;
-  font-size: 60px;
-}
-.titleBox .title .strokeText {
-  -webkit-text-stroke-width: 4px;
-  -webkit-text-stroke-color: #121629;
-  /* 外部描边效果*/
-  text-shadow: 6px 6px 6px #121629;
-}
 .backBox {
   position: fixed;
-  top: 45%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 480px;
+  width: 800px;
   height: 300px;
   padding: 40px;
   background-color: #b8c1ec;
   border: 10px solid #121629;
   box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
+}
+.backBox .boxContainTitle {
+  left: 0;
+  top: 5px;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  width: 880px;
+  height: 60px;
+  padding: 5px;
+  border-bottom: 10px solid #121629;
+}
+.backBox .boxContainTitle .circleStyle {
+  width: 50px;
+  aspect-ratio: 1/1;
+}
+.backBox .boxContainTitle .titleBox {
+  display: flex;
+  justify-content: center;
+  /* 水平居中 */
+  align-items: center;
+  /* 垂直居中 */
+  position: relative;
+  z-index: 200;
+  width: 100%;
+}
+.backBox .boxContainTitle .titleBox .title {
+  color: #121629;
+  font-size: 60px;
+}
+.backBox .boxContainTitle .titleBox .title .strokeText {
+  /* 外部描边效果*/
+  text-shadow: 8px 0px 0px #eebbc3;
 }
 .frontBox {
   position: fixed;
@@ -38,7 +53,7 @@
   top: 60%;
   left: 43%;
   transform: translate(-50%, -50%);
-  width: 480px;
+  width: 800px;
   height: 300px;
   padding: 40px;
   background-color: #fffffe;
@@ -54,8 +69,8 @@
   transition: transform 0.5s ease;
 }
 .frontBox .imgMe:hover {
+  transform: scale(1.1);
   cursor: pointer;
-  transform: scale(1.2);
 }
 .frontBox .catsBox {
   display: flex;
@@ -63,7 +78,7 @@
   justify-content: center;
   margin-top: 40px;
   width: 60%;
-  height: 300px;
+  height: 350px;
 }
 .frontBox .catsBox .box {
   position: relative;
@@ -81,44 +96,44 @@
   cursor: pointer;
 }
 .abaoImgStyle {
-  width: 60%;
+  width: 40%;
 }
 .heihuImgStyle {
-  width: 70%;
+  width: 50%;
   transform: rotate(30deg);
 }
 .qiuqiuImgStyle {
-  width: 50%;
+  width: 30%;
   transform: rotate(-15deg);
 }
 .xiaoheiImgStyle {
-  width: 60%;
+  width: 40%;
   transform: rotate(30deg);
 }
 .xiaoheiziImgStyle {
-  width: 80%;
+  width: 60%;
 }
 .memeImgStyle {
-  width: 60%;
+  width: 40%;
   transform: rotate(-20deg);
 }
 .xiaohuaImgStyle {
-  width: 60%;
+  width: 40%;
   transform: rotate(-20deg);
 }
 .yinyuanImgStyle {
-  width: 70%;
+  width: 50%;
   transform: rotate(20deg);
 }
 .yuanbaoImgStyle {
-  width: 60%;
+  width: 40%;
   transform: rotate(-15deg);
 }
 .svgContainer {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-120%, -190%);
+  transform: translate(-200%, -250%);
   z-index: 200;
 }
 .linkImage {
