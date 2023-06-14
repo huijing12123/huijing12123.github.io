@@ -103,15 +103,15 @@
   transform: rotate(30deg);
 }
 .qiuqiuImgStyle {
-  width: 30%;
+  width: 40%;
   transform: rotate(-15deg);
 }
 .xiaoheiImgStyle {
-  width: 40%;
+  width: 60%;
   transform: rotate(30deg);
 }
 .xiaoheiziImgStyle {
-  width: 60%;
+  width: 40%;
 }
 .memeImgStyle {
   width: 40%;
@@ -133,7 +133,7 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-200%, -250%);
+  transform: translate(-200%, -200%);
   z-index: 200;
 }
 .linkImage {
@@ -141,4 +141,30 @@
   width: 40%;
   aspect-ratio: 618/611;
   margin-right: 10px;
+}
+@keyframes slideInLeftBack {
+  0% {
+    transform: translateX(-100%) translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 1;
+  }
+}
+.slideInLeftBack {
+  animation: slideInLeftBack 1.5s ease-in-out forwards;
+}
+@keyframes slideInLeftFront {
+  0% {
+    transform: translateX(-100%) translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-45%) translateY(-50%);
+    opacity: 1;
+  }
+}
+.slideInLeftFront {
+  animation: slideInLeftFront 1.5s ease-in-out forwards;
 }
