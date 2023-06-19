@@ -9,6 +9,7 @@
   background-color: #b8c1ec;
   border: 10px solid #121629;
   box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
+  z-index: 100;
 }
 .backBox .boxContainTitle {
   left: 0;
@@ -59,6 +60,7 @@
   background-color: #fffffe;
   border: 10px solid #121629;
   box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
+  z-index: 200;
 }
 .frontBox .imgMe {
   position: relative;

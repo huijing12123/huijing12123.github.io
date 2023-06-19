@@ -5,6 +5,7 @@ import styles from "../Welcome/welcome.module.css"
 import meImage from '../../common/images/me.jpg';
 import circle from '../../common/images/Ellipse.png';
 
+
 // import all the images
 import abaoImage from '../../common/images/abao.jpg';
 import heihuImage from '../../common/images/heihu.jpg';
@@ -50,6 +51,7 @@ function Welcome() {
 
     return (
         <Fragment>
+             {/* <Flower /> */}
             <div className={`${styles.backBox} ${styles.slideInLeftBack}`}>
                 <div className={styles.boxContainTitle}>
                     <div>
