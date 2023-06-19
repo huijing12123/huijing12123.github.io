@@ -6,9 +6,6 @@ import PersonalityComponent from "../Personality"
 import EducationComponent from "../Education"
 import HobbyComponent from "../Hobby"
 import ProjectComponent from "../Project"
-// import FlowerBackground from '../../components/FlowerBackground'; // 导入 FlowerBackground 组件
-// import GridBackground from '../../components/GridBackground';
-
 
 
 import xiaohei from '../../common/images/xiaohei_remove.png';
@@ -39,7 +36,6 @@ function Resume() {
         <Fragment>
             {/* <GridBackground /> */}
             <div className={styles.wrapper}>
-
                 <div className={styles.navigation}>
                     <TitleAndImage
                         title="Personality"
@@ -61,6 +57,7 @@ function Resume() {
                         onClick={() => setSelectedComponent('project')} />
                 </div>
                 <div className={styles.insideBox}>
+                   
                     {selectedComponent === 'personality' && <PersonalityComponent />}
                     {selectedComponent === 'education' && <EducationComponent />}
                     {selectedComponent === 'hobby' && <HobbyComponent />}
