@@ -28,8 +28,8 @@ const Background = () => {
             position: 'absolute', // 设置元素的定位方式为absolute
             left: `${left}px`,
             top: `${top}px`,
-            width: "60px",
-            height: "60px",
+            width: "72px",
+            height: "67px",
             zIndex: "-100",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
