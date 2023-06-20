@@ -6,6 +6,7 @@ import PersonalityComponent from "../Personality"
 import EducationComponent from "../Education"
 import HobbyComponent from "../Hobby"
 import ProjectComponent from "../Project"
+import LoadingComponent from "../Loading"
 
 
 import xiaohei from '../../common/images/xiaohei_remove.png';
@@ -29,41 +30,58 @@ function Resume() {
         </div>
     );
 
+
+    // 我们使用了isLoading状态来控制加载组件的显示和隐藏。
+    // 初始状态下，加载组件会显示（isLoading为true）。
+    // 当点击其他组件时，通过调用handleComponentClick函数，我们更新了选中的组件和加载状态，使加载组件隐藏（isLoading变为false），同时显示选中的组件。
+
     // 处理 insideBox里组件的切换
-    const [selectedComponent, setSelectedComponent] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
+    const [selectedComponent, setSelectedComponent] = useState('');
+
+    // 在这里处理点击事件，更新选中的组件和加载状态
+    const handleComponentClick = (component) => {
+        setSelectedComponent(component);
+        setIsLoading(false);
+    };
+
 
     return (
         <Fragment>
-            {/* <GridBackground /> */}
             <div className={styles.wrapper}>
                 <div className={styles.navigation}>
                     <TitleAndImage
                         title="Personality"
                         imgSrc={xiaohua}
-                        onClick={() => setSelectedComponent('personality')} />
+                        onClick={() => handleComponentClick('personality')} />
                     <TitleAndImage
                         title="Education"
                         imgSrc={xiaohei}
-                        onClick={() => setSelectedComponent('education')}
+                        onClick={() => handleComponentClick('education')}
                     />
                     <TitleAndImage
                         title="Hobby"
                         imgSrc={yinyuan}
-                        onClick={() => setSelectedComponent('hobby')}
+                        onClick={() => handleComponentClick('hobby')}
                     />
                     <TitleAndImage
                         title="Project"
                         imgSrc={xiaoheizi}
-                        onClick={() => setSelectedComponent('project')} />
+
+                        onClick={() => handleComponentClick('project')} />
                 </div>
                 <div className={styles.insideBox}>
-                   
-                    {selectedComponent === 'personality' && <PersonalityComponent />}
-                    {selectedComponent === 'education' && <EducationComponent />}
-                    {selectedComponent === 'hobby' && <HobbyComponent />}
-                    {selectedComponent === 'project' && <ProjectComponent />}
+                    {isLoading ? (
+                        <LoadingComponent />
+                    ) : (
+                        <>
+                            {selectedComponent === 'personality' && <PersonalityComponent />}
+                            {selectedComponent === 'education' && <EducationComponent />}
+                            {selectedComponent === 'hobby' && <HobbyComponent />}
+                            {selectedComponent === 'project' && <ProjectComponent />}
+                        </>
+                    )}
                 </div>
-
             </div>
             {/* <FlowerBackground /> */}
         </Fragment>

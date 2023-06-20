@@ -24,7 +24,7 @@ function Personality() {
                         <div className={styles._boxTitle} style={{ fontSize: "14px" }}>FEELING</div>
                         <div className={styles._boxSvg}>
                             <span>
-                                <svg t="1687150551436" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5164" width="100" height="100">
+                                <svg t="1687150551436" className="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5164" width="100" height="100">
                                     <text x="50%" y="20%" dominantBaseline="middle" textAnchor="middle" style={{ fontSize: '200px', fontWeight: "bold", fill: "#fffffe" }}>
                                         88%
                                     </text>

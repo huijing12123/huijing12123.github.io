@@ -21,6 +21,17 @@ import alcohol from '../../common/images/alcohol.png';
 import code from '../../common/images/code.png';
 
 
+// 防抖函数
+function debounce(func, delay) {
+    let timeoutId;
+    return function (...args) {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+            func.apply(this, args);
+        }, delay);
+    };
+}
+
 function Hobby() {
     const parentRef = useRef(null);
     const childRef = useRef(null);
@@ -53,13 +64,13 @@ function Hobby() {
 
         animationIdRef.current = requestAnimationFrame(animate);
 
-        const handleMouseEnter = () => {
+        const handleMouseEnter = debounce(() => {
             cancelAnimationFrame(animationIdRef.current);
-        };
+        }, 200); // 设置延迟时间为200毫秒
 
-        const handleMouseLeave = () => {
+        const handleMouseLeave = debounce(() => {
             animationIdRef.current = requestAnimationFrame(animate);
-        };
+        }, 200); // 设置延迟时间为200毫秒
 
         parentElement.addEventListener('mouseenter', handleMouseEnter);
         parentElement.addEventListener('mouseleave', handleMouseLeave);
@@ -74,7 +85,7 @@ function Hobby() {
 
     return (
         <Fragment>
-            <div ref={parentRef} style={{ display: "block", overflow: "hidden", whiteSpace: "nowrap" }}>
+            <div ref={parentRef} style={{ display: "block", overflow: "hidden", whiteSpace: "nowrap", boxShadow: "8px 8px 8px 10px rgba(0, 0, 0, 0.2)" }}>
                 <div ref={childRef} className={styles.wrapper}>
                     <div className={styles._box}>
                         <div style={{ marginBottom: "20px" }}>
@@ -252,7 +263,6 @@ function Hobby() {
 
                 </div>
             </div>
-
         </Fragment>
 
     );
