@@ -34,6 +34,7 @@ const Background = () => {
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             backgroundSize: "cover",
+            
         };
         backgroundImages.push(
             <div key={i} style={style}></div>

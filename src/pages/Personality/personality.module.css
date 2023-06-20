@@ -16,7 +16,8 @@
   margin-bottom: 20px;
 }
 .wrapper .titleBox ._title {
-  font-size: 20px;
+  font-size: 26px;
+  font-weight: 800;
   box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
   margin-left: 20px;
   padding: 5px;
