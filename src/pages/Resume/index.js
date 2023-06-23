@@ -10,7 +10,7 @@ import LoadingComponent from "../Loading"
 
 
 import xiaohei from '../../common/images/xiaohei_remove.png';
-import xiaoheizi from '../../common/images/xiaoheizi_remove.png';
+import qiuqiu from '../../common/images/qiuqiu_remove.png';
 import xiaohua from '../../common/images/xiaohua_remove.png';
 import yinyuan from '../../common/images/yinyuan_remove.png';
 
@@ -49,7 +49,7 @@ function Resume() {
     return (
         <Fragment>
             <div className={styles.wrapper}>
-                <div className={styles.navigation}>
+                <div className={`${styles.navigation} ${styles.slideInLeft}`}>
                     <TitleAndImage
                         title="Personality"
                         imgSrc={xiaohua}
@@ -65,8 +65,8 @@ function Resume() {
                         onClick={() => handleComponentClick('hobby')}
                     />
                     <TitleAndImage
-                        title="Project"
-                        imgSrc={xiaoheizi}
+                        title="Project & Internship"
+                        imgSrc={qiuqiu}
 
                         onClick={() => handleComponentClick('project')} />
                 </div>

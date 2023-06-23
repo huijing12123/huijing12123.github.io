@@ -11,10 +11,7 @@
     .navigation {
         display: flex;
         flex-direction: column;
-        // justify-content: space-between;
-        // align-items: center;
-        // align-items: center;
-        // background-color: #fffffe;
+
         width: 1000px;
         color: #fffffe;
         font-size: 26px;
@@ -26,13 +23,14 @@
 
         .titleAndImg {
             display: flex;
-            flex-direction: row;
+            flex-direction: row-reverse;
             align-items: center;
             align-items: center;
             // width: 25%;
             margin-bottom: 40px;
             // border: solid 8px #fffffe;
             box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
+            background-color: #232649;
 
 
             .titleBox {
@@ -71,3 +69,20 @@
     }
 }
 
+.slideInLeft {
+    animation-name: slideInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

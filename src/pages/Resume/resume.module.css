@@ -18,10 +18,11 @@
 }
 .wrapper .navigation .titleAndImg {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   align-items: center;
   margin-bottom: 40px;
   box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
+  background-color: #232649;
 }
 .wrapper .navigation .titleAndImg .titleBox {
   z-index: 200;
@@ -39,4 +40,19 @@
 .wrapper .insideBox {
   width: 80%;
   height: auto;
+}
+.slideInLeft {
+  animation-name: slideInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

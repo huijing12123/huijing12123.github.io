@@ -19,7 +19,7 @@ function Personality() {
                     </div>
                 </div>
                 <div className={styles.contentBox}>
-                    <div className={[styles._box, styles._boxNature].join(" ")}>
+                    <div className={[styles._box, styles._boxNature].join(" ")} >
                         <div className={styles._boxTitle}>NATURE</div>
                         <div className={styles._boxTitle} style={{ fontSize: "14px" }}>FEELING</div>
                         <div className={styles._boxSvg}>
@@ -41,7 +41,7 @@ function Personality() {
                             </p>
                         </div>
                     </div>
-                    <div className={[styles._box, styles._boxTactic].join(" ")}>
+                    <div className={[styles._box, styles._boxTactic].join(" ")} >
                         <div className={styles._boxTitle}>TACTIC</div>
                         <div className={styles._boxTitle} style={{ fontSize: "14px" }}>JUDGING</div>
                         <div className={styles._boxSvg}>
@@ -61,7 +61,7 @@ function Personality() {
                             <p>Mostly Judging. <br></br>Likely decisive, thorough, and highly organized. <br></br>Values clarity and prefers planning to spontaneity. </p>
                         </div>
                     </div>
-                    <div className={[styles._box, styles._boxEnergy].join(" ")}>
+                    <div className={[styles._box, styles._boxEnergy].join(" ")} >
                         <div className={styles._boxTitle}>ENERGY</div>
                         <div className={styles._boxTitle} style={{ fontSize: "14px" }}>OBSERVANT</div>
                         <div className={styles._boxSvg}>
@@ -81,7 +81,7 @@ function Personality() {
                             <p>Mostly Observant.<br></br> Likely pragmatic and down-to-earth, with a strong focus on what is happening or very likely to happen.</p>
                         </div>
                     </div>
-                    <div className={[styles._box, styles._boxIdentity].join(" ")}>
+                    <div className={[styles._box, styles._boxIdentity].join(" ")} >
                         <div className={styles._boxTitle}>IDENTITY</div>
                         <div className={styles._boxTitle} style={{ fontSize: "14px" }}>TURBULENT</div>
                         <div className={styles._boxSvg}>
@@ -101,7 +101,7 @@ function Personality() {
                             <p>Mostly Turbulent. <br></br> Likely self-conscious, sensitive to stress, success-driven, perfectionistic, and eager to improve.</p>
                         </div>
                     </div>
-                    <div className={[styles._box, styles._boxMind].join(" ")}>
+                    <div className={[styles._box, styles._boxMind].join(" ")}  >
                         <div className={styles._boxTitle}>MIND</div>
                         <div className={styles._boxTitle} style={{ fontSize: "14px" }}>INTROVERTED</div>
                         <div className={styles._boxSvg}>
