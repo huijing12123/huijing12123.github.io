@@ -1,9 +1,19 @@
-import React,{Fragment} from 'react';
+import React, { Fragment } from 'react';
+import styles from "./loading.module.css"
+
+
+
+// import qiuqiu from "../../common/images/qiuqiu_remove.png"
 
 function Loading() {
     return (
         <Fragment>
-            <div>this is loading page</div>
+            <div className={styles.wrapper}>
+                {/* <img src={qiuqiu} alt=''></img> */}
+                <div className={styles.container}>
+                    Loading
+                </div>
+            </div>
         </Fragment>
 
     );
