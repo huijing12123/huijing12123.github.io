@@ -3,7 +3,7 @@ import styles from "./loading.module.css"
 
 
 
-// import qiuqiu from "../../common/images/qiuqiu_remove.png"
+import qiuqiu from "../../common/images/qiuqiu_remove.png"
 
 function Loading() {
     return (
@@ -11,7 +11,7 @@ function Loading() {
             <div className={styles.wrapper}>
                 {/* <img src={qiuqiu} alt=''></img> */}
                 <div className={styles.container}>
-                    Loading
+                  {/* <img src={qiuqiu} alt=''></img> */}
                 </div>
             </div>
         </Fragment>

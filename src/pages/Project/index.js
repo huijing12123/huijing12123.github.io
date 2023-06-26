@@ -194,10 +194,12 @@ function Project() {
     );
 
 
+
+
     return (
         <div className={styles.wrapper}>
             <AnimatedContainer rest={rest} size={size} onClick={toggleGrosaver}>
-                <div style={{ color: '#fffffe', fontWeight: '900' }}>Website Development Project: "Grosaver"</div>
+                <div className={styles.animationContainerOne} style={{ color: '#fffffe', fontWeight: '900' }}>Website Development Project: "Grosaver"</div>
                 {transition((style, item) => (
                     <animated.div
                         className={styles.item}
@@ -250,7 +252,7 @@ function Project() {
             </AnimatedContainer>
 
             <AnimatedContainer rest={restInternship} size={sizeInternship} onClick={toggleInternship}>
-                <div style={{ color: '#fffffe', fontWeight: '900' }}>Xiangcai Securities' Quantitative Investment Department</div>
+                <div className={styles.animationContainerTwo} style={{ color: '#fffffe', fontWeight: '900' }}>Xiangcai Securities' Quantitative Investment Department</div>
                 {transitionInternship((style, item) => (
                     <animated.div
                         className={styles.item}
@@ -261,9 +263,9 @@ function Project() {
                         }}
                     >
                         <p>
-                            Internship at Xiangcai Securities' quantitative investment department
+                            Internship at XIANGCAI SECURITIES CO., LTD. 
                         </p>
-                        During my internship at Xiangcai Securities' quantitative investment department, I was responsible for extracting and cleaning stock data from Wind Financial Terminal. I utilized a multi-factor model for stock selection and employed neural networks to develop models that identified robust factors for predicting returns. Additionally, I assisted the operations department in enhancing efficiency by utilizing web scraping techniques to gather real-time dynamic data.
+                        During my internship, I was responsible for extracting and cleaning stock data from Wind Financial Terminal. I utilized a multi-factor model for stock selection and employed neural networks to develop models that identified robust factors for predicting returns. Additionally, I assisted the operations department in enhancing efficiency by utilizing web scraping techniques to gather real-time dynamic data.
                         <br></br>
                         <p> Key highlights of my internship include:</p>
                         <ul>
@@ -277,7 +279,7 @@ function Project() {
             </AnimatedContainer>
 
             <AnimatedContainer rest={restAnalyse} size={sizeAnalyse} onClick={toggleAnalyse}>
-                <div style={{ color: '#fffffe', fontWeight: '900' }}>Business Analysis Experience</div>
+                <div className={styles.animationContainerThree} style={{ color: '#fffffe', fontWeight: '900' }}>Business Analysis Experience</div>
                 {transitionAnalyse((style, item) => (
                     <animated.div
                         className={styles.item}
@@ -308,7 +310,7 @@ function Project() {
             </AnimatedContainer>
 
             <AnimatedContainer rest={restPersonal} size={sizePersonal} onClick={togglePersonal}>
-                <div style={{ color: '#fffffe', fontWeight: '900' }}>Personal Website</div>
+                <div className={styles.animationContainerFour} style={{ color: '#fffffe', fontWeight: '900' }}>Personal Website</div>
                 {transitionPersonal((style, item) => (
                     <animated.div
                         className={styles.item}

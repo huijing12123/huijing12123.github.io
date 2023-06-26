@@ -10,7 +10,7 @@ function Personality() {
                     <div className={styles._link}>
                         <a href=' https://www.16personalities.com/profiles/68118e48fd0cf'>learn more
                             <span style={{ marginLeft: "5px" }} >
-                                <svg t="1687144286449" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3182" width="15" height="15">
+                                <svg t="1687144286449" className="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3182" width="15" height="15">
                                     <path d="M303.307286 9.731785L194.095037 118.944034c-11.894403 11.894403-11.894403 32.439282 0 45.414995L541.195354 511.459345 194.095037 859.640971c-11.894403 11.894403-11.894403 32.439282 0 45.414995L303.307286 1014.268215c11.894403 11.894403 32.439282 11.894403 45.414995 0l366.563886-366.563886c1.081309-1.081309 3.243928-2.162619 4.325237-3.243928l110.293559-110.293558c6.487856-6.487856 9.731785-14.057022 9.731785-22.707498s-3.243928-16.219641-9.731785-22.707497L719.611404 379.539599c-1.081309-1.081309-2.162619-2.162619-4.325237-3.243928L348.722281 9.731785C335.746568-3.243928 316.282999-3.243928 303.307286 9.731785z" p-id="3183" fill="#fffffe">
                                     </path>
                                 </svg>
@@ -19,7 +19,7 @@ function Personality() {
                     </div>
                 </div>
                 <div className={styles.contentBox}>
-                    <div className={[styles._box, styles._boxNature].join(" ")} >
+                    <div className={[styles._box, styles._boxNature].join(" ")}  >
                         <div className={styles._boxTitle}>NATURE</div>
                         <div className={styles._boxTitle} style={{ fontSize: "14px" }}>FEELING</div>
                         <div className={styles._boxSvg}>
@@ -61,7 +61,7 @@ function Personality() {
                             <p>Mostly Judging. <br></br>Likely decisive, thorough, and highly organized. <br></br>Values clarity and prefers planning to spontaneity. </p>
                         </div>
                     </div>
-                    <div className={[styles._box, styles._boxEnergy].join(" ")} >
+                    <div className={[styles._box, styles._boxEnergy].join(" ")}  >
                         <div className={styles._boxTitle}>ENERGY</div>
                         <div className={styles._boxTitle} style={{ fontSize: "14px" }}>OBSERVANT</div>
                         <div className={styles._boxSvg}>
@@ -81,12 +81,12 @@ function Personality() {
                             <p>Mostly Observant.<br></br> Likely pragmatic and down-to-earth, with a strong focus on what is happening or very likely to happen.</p>
                         </div>
                     </div>
-                    <div className={[styles._box, styles._boxIdentity].join(" ")} >
+                    <div className={[styles._box, styles._boxIdentity].join(" ")}   >
                         <div className={styles._boxTitle}>IDENTITY</div>
                         <div className={styles._boxTitle} style={{ fontSize: "14px" }}>TURBULENT</div>
                         <div className={styles._boxSvg}>
                             <span>
-                                <svg t="1687150551436" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5164" width="100" height="100">
+                                <svg t="1687150551436" className="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5164" width="100" height="100">
                                     <text x="50%" y="20%" dominantBaseline="middle" textAnchor="middle" style={{ fontSize: '200px', fontWeight: "bold", fill: "#fffffe" }}>
                                         88%
                                     </text>
@@ -101,7 +101,7 @@ function Personality() {
                             <p>Mostly Turbulent. <br></br> Likely self-conscious, sensitive to stress, success-driven, perfectionistic, and eager to improve.</p>
                         </div>
                     </div>
-                    <div className={[styles._box, styles._boxMind].join(" ")}  >
+                    <div className={[styles._box, styles._boxMind].join(" ")} >
                         <div className={styles._boxTitle}>MIND</div>
                         <div className={styles._boxTitle} style={{ fontSize: "14px" }}>INTROVERTED</div>
                         <div className={styles._boxSvg}>
@@ -124,7 +124,7 @@ function Personality() {
                 </div>
             </div>
 
-        </Fragment>
+        </Fragment >
 
     );
 }

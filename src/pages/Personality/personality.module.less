@@ -7,6 +7,9 @@
     color: #fffffe;
     padding: 10px;
 
+    // animation: fadeIn 1s ease-in-out;
+
+
     .titleBox {
         width: 100%;
         height: auto;
@@ -126,6 +129,8 @@
     left: 20px;
     background-color: #eebbc3;
     // border: solid 10px #b8c1ec;
+    animation: fadeIn 0.5s ease-in-out;
+
 }
 
 
@@ -135,6 +140,8 @@
     left: 150px;
     background-color: #b8c1ec;
     // border: solid 10px #eebbc3;
+    animation: fadeIn 1s ease-in-out;
+
 }
 
 ._boxEnergy {
@@ -142,6 +149,8 @@
     left: 250px;
     background-color: #eebbc3;
     // border: solid 10px #b8c1ec;
+    animation: fadeIn 1.5s ease-in-out;
+
 }
 
 ._boxIdentity {
@@ -149,6 +158,8 @@
     left: 400px;
     background-color: #b8c1ec;
     // border: solid 10px #eebbc3;
+    animation: fadeIn 2s ease-in-out;
+
 
 }
 
@@ -157,5 +168,27 @@
     right: 20px;
     background-color: #eebbc3;
     // border: solid 10px #b8c1ec;
+    animation: fadeIn 2.5s ease-in-out;
+
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* 或者使用百分比 */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
