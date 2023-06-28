@@ -211,7 +211,7 @@ function Project() {
 
     return (
         <div className={styles.wrapper}>
-             <button style={{ width: "25%", backgroundColor: "#fffffe", color: "#121629", fontSize: "18px", marginBottom: "10px", fontFamily: "Comic Sans MS", fontWeight: "800", border: "8px solid #121629", boxShadow: "8px 8px 10px rgba(0, 0, 0, 0.2)" }} onClick={handleDownload}>Down load resume</button>
+             <button style={{ width: "25%", backgroundColor: "#fffffe", color: "#121629", fontSize: "18px", marginBottom: "10px", fontFamily: "Comic Sans MS", fontWeight: "800", boxShadow: "8px 8px 10px rgba(0, 0, 0, 0.2)" }} onClick={handleDownload}>Download resume</button>
             <AnimatedContainer rest={rest} size={size} onClick={toggleGrosaver}>
                 <div className={styles.animationContainerOne} style={{ color: '#fffffe', fontWeight: '900' }}>Website Development Project: "Grosaver"</div>
                 {transition((style, item) => (

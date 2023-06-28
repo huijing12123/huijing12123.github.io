@@ -3,11 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@formspree/react": "^2.4.4",
     "@react-spring/web": "^9.7.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
     "file-saver": "^2.0.5",
+    "nodemailer": "^6.9.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.12.1",
@@ -44,5 +49,6 @@
   "main": "index.js",
   "repository": "localhost:3000",
   "author": "Jing12123 <418274909@qq.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "proxy": "http://localhost:5000"
 }

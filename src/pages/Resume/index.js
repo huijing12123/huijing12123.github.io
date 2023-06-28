@@ -7,12 +7,14 @@ import EducationComponent from "../Education"
 import HobbyComponent from "../Hobby"
 import ProjectComponent from "../Project"
 import LoadingComponent from "../Loading"
+import ContactFormComponent from '../ContactForm';
 
 
 import xiaohei from '../../common/images/xiaohei_remove.png';
 import qiuqiu from '../../common/images/qiuqiu_remove.png';
 import xiaohua from '../../common/images/xiaohua_remove.png';
 import yinyuan from '../../common/images/yinyuan_remove.png';
+import abao from "../../common/images/abao_remove.png"
 
 
 
@@ -69,6 +71,10 @@ function Resume() {
                         imgSrc={qiuqiu}
 
                         onClick={() => handleComponentClick('project')} />
+                    <TitleAndImage
+                        title="Get in touch"
+                        imgSrc={abao}
+                        onClick={() => handleComponentClick('contactForm')} />
                 </div>
                 <div className={styles.insideBox}>
                     {isLoading ? (
@@ -79,11 +85,12 @@ function Resume() {
                             {selectedComponent === 'education' && <EducationComponent />}
                             {selectedComponent === 'hobby' && <HobbyComponent />}
                             {selectedComponent === 'project' && <ProjectComponent />}
+                            {selectedComponent === 'contactForm' && <ContactFormComponent />}
                         </>
                     )}
                 </div>
             </div>
-            {/* <FlowerBackground /> */}
+
         </Fragment>
 
     );
