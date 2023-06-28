@@ -33,3 +33,6 @@
     scale: 1;
   }
 }
+button:hover {
+  cursor: pointer;
+}

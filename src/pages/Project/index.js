@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
 
+
+import { saveAs } from 'file-saver';
+
+
+
+
 import {
     useTransition,
     useSpring,
@@ -9,6 +15,8 @@ import {
     useSpringRef,
 } from '@react-spring/web';
 import AnimatedContainer from '../../components/AnimatedContainer';
+import resume from '../../common/files/HannaWong_MonashUniversity_2022.pdf'
+
 
 import styles from './project.module.css';
 
@@ -21,6 +29,11 @@ function Project() {
     const [openInternship, setOpenInternship] = useState(false);
     const [openAnalyse, setOpenAnalyse] = useState(false);
     const [openPersonal, setOpenPersonal] = useState(false);
+
+    const handleDownload = () => {
+        // 执行PDF下载操作
+        saveAs(resume, 'HannaResume.pdf');
+    };
 
     const springApi = useSpringRef();
     const { size, ...rest } = useSpring({
@@ -198,6 +211,7 @@ function Project() {
 
     return (
         <div className={styles.wrapper}>
+             <button style={{ width: "25%", backgroundColor: "#fffffe", color: "#121629", fontSize: "18px", marginBottom: "10px", fontFamily: "Comic Sans MS", fontWeight: "800", border: "8px solid #121629", boxShadow: "8px 8px 10px rgba(0, 0, 0, 0.2)" }} onClick={handleDownload}>Down load resume</button>
             <AnimatedContainer rest={rest} size={size} onClick={toggleGrosaver}>
                 <div className={styles.animationContainerOne} style={{ color: '#fffffe', fontWeight: '900' }}>Website Development Project: "Grosaver"</div>
                 {transition((style, item) => (
@@ -252,7 +266,7 @@ function Project() {
             </AnimatedContainer>
 
             <AnimatedContainer rest={restInternship} size={sizeInternship} onClick={toggleInternship}>
-                <div className={styles.animationContainerTwo} style={{ color: '#fffffe', fontWeight: '900' }}>Xiangcai Securities' Quantitative Investment Department</div>
+                <div className={styles.animationContainerTwo} style={{ color: '#fffffe', fontWeight: '900' }}>XIANGCAI SECURITIES CO., LTD. Quantitative Investment Department</div>
                 {transitionInternship((style, item) => (
                     <animated.div
                         className={styles.item}
@@ -263,7 +277,7 @@ function Project() {
                         }}
                     >
                         <p>
-                            Internship at XIANGCAI SECURITIES CO., LTD. 
+                            Internship at XIANGCAI SECURITIES CO., LTD.
                         </p>
                         During my internship, I was responsible for extracting and cleaning stock data from Wind Financial Terminal. I utilized a multi-factor model for stock selection and employed neural networks to develop models that identified robust factors for predicting returns. Additionally, I assisted the operations department in enhancing efficiency by utilizing web scraping techniques to gather real-time dynamic data.
                         <br></br>
@@ -346,6 +360,7 @@ function Project() {
                     </animated.div>
                 ))}
             </AnimatedContainer>
+           
 
         </div>
     );
