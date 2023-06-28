@@ -64,72 +64,47 @@
 }
 .frontBox .imgMe {
   position: relative;
-  margin-right: 10px;
-  width: 100%;
+  width: 80%;
   aspect-ratio: 618/611;
   box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
+  background-color: #b8c1ec;
+  border: 10px solid #121629;
   transition: transform 0.5s ease;
 }
 .frontBox .imgMe:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
   cursor: pointer;
 }
-.frontBox .catsBox {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 40px;
+.frontBox .intro {
   width: 60%;
-  height: 350px;
-}
-.frontBox .catsBox .box {
-  position: relative;
-  width: 33.33%;
-  /* 让每个 box 占据父容器的 1/3 宽度 */
-  box-sizing: border-box;
-  /* 考虑边框和内边距的宽度 */
-  text-align: center;
-}
-.frontBox .catsBox .box .catImg {
-  aspect-ratio: 547/538;
+  padding: 10px;
+  background-color: #eebbc3;
+  color: #121629;
   box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
+  border: 10px solid #121926;
 }
-.frontBox .catsBox .box .catImg:hover {
-  cursor: pointer;
+.frontBox .intro .introTitle {
+  font-size: 26px;
+  font-weight: 900;
 }
-.abaoImgStyle {
-  width: 40%;
+.frontBox .intro .skillSwaper {
+  width: 65%;
+  height: 20px;
+  /* 调整容器高度以适应内容 */
+  background-color: #b8c1ec;
+  border: 5px solid #121926;
+  overflow: hidden;
+  position: relative;
 }
-.heihuImgStyle {
-  width: 50%;
-  transform: rotate(30deg);
+.frontBox .intro .skillSwaper .swaperContainer {
+  color: #fffffe;
+  position: absolute;
+  white-space: nowrap;
+  animation: scroll 15s linear infinite;
 }
-.qiuqiuImgStyle {
-  width: 40%;
-  transform: rotate(-15deg);
-}
-.xiaoheiImgStyle {
-  width: 60%;
-  transform: rotate(30deg);
-}
-.xiaoheiziImgStyle {
-  width: 40%;
-}
-.memeImgStyle {
-  width: 40%;
-  transform: rotate(-20deg);
-}
-.xiaohuaImgStyle {
-  width: 40%;
-  transform: rotate(-20deg);
-}
-.yinyuanImgStyle {
-  width: 50%;
-  transform: rotate(20deg);
-}
-.yuanbaoImgStyle {
-  width: 40%;
-  transform: rotate(-15deg);
+.frontBox .intro .introBody {
+  font-size: 14px;
+  text-align: justify;
 }
 .svgContainer {
   position: fixed;
@@ -169,4 +144,12 @@
 }
 .slideInLeftFront {
   animation: slideInLeftFront 1.5s ease-in-out forwards;
+}
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
 }

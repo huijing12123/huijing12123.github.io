@@ -1,48 +1,27 @@
-import React, { Fragment, useState, useEffect} from 'react';
+import React, { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
 
 import "../../common/style/global.css"
 import styles from "../Welcome/welcome.module.css"
-import meImage from '../../common/images/me.jpg';
+
+
+
+import meImage from '../../common/images/me_remove.png';
 import circle from '../../common/images/Ellipse.png';
 
-
-// import all the images
-import abaoImage from '../../common/images/abao.jpg';
-import heihuImage from '../../common/images/heihu.jpg';
-import memeImage from '../../common/images/meme.jpg';
-import qiuqiuImage from '../../common/images/qiuqiu.jpg';
-import xiaoheiImage from '../../common/images/xiaohei.jpg';
-import xiaoheiziImage from '../../common/images/xiaoheizi.jpg';
-import xiaohuaImage from '../../common/images/xiaohua.jpg';
-import yinyuanImage from '../../common/images/yinyuan.jpg';
-import yuanbaoImage from '../../common/images/yuanbao.jpg';
-
-const catImages = [
-    { name: 'abao', image: abaoImage, rotation: 20 },
-    { name: 'heihu', image: heihuImage, rotation: 10 },
-    { name: 'meme', image: memeImage, rotation: 10 },
-    { name: 'qiuqiu', image: qiuqiuImage, rotation: 345 },
-    { name: 'xiaohei', image: xiaoheiImage, rotation: 0 },
-    { name: 'xiaoheizi', image: xiaoheiziImage, rotation: 20 },
-    { name: 'xiaohua', image: xiaohuaImage, rotation: 20 },
-    { name: 'yinyuan', image: yinyuanImage, rotation: 20 },
-    { name: 'yuanbao', image: yuanbaoImage, rotation: 345 }
-];
-
 function Welcome() {
-    const [scale, setScale] = useState(1);
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setScale((prevScale) => (prevScale === 1 ? 1.2 : 1));
-        }, 1000);
+    // const [scale, setScale] = useState(1);
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         setScale((prevScale) => (prevScale === 1 ? 1.2 : 1));
+    //     }, 1000);
 
-        return () => {
-            clearInterval(interval);
-        };
-    }, []);
+    //     return () => {
+    //         clearInterval(interval);
+    //     };
+    // }, []);
 
     const [isHovered, setIsHovered] = useState(false);
     const handleMouseEnter = () => {
@@ -54,7 +33,6 @@ function Welcome() {
 
     return (
         <Fragment>
-            {/* <Flower /> */}
             <div className={`${styles.backBox} ${styles.slideInLeftBack}`}>
                 <div className={styles.boxContainTitle}>
                     <div>
@@ -89,17 +67,22 @@ function Welcome() {
                         </svg>
                     </div>
                 )}
-                <div className={styles.catsBox}>
-                    {catImages.map((cat, index) => (
-                        <div className={styles.box} key={index} style={{ transform: `rotate(-${cat.rotation}deg)` }}>
-                            <img
-                                src={cat.image}
-                                className={[styles.catImg, styles[`${cat.name}ImgStyle`]].join(' ')}
-                                alt={cat.name}
-                                style={{ transform: `scale(${scale})`, transition: 'transform 1s ease' }}
-                            />
+               
+                <div className={styles.intro}>
+                    <p className={styles.introTitle}>Hi~ I am Hanna </p>
+                    <div className={styles.skillSwaper}>
+                        <div className={styles.swaperContainer}>
+                            <p> Web Developer</p>
+                            <p> Business Analyst</p>
+                            <p> Graduate Industry Experience Winner</p>
+                            <p> FRM Program – Passed Part I</p>
+                            <p> CFA level 2 (passed)</p>
                         </div>
-                    ))}
+
+                    </div>
+                    <p className={styles.introBody}>
+                        I am a <strong>web developer</strong> and obtained a Master's degree in Information Technology from Monash University, and the GROSAVER project I participated in was awarded the <strong>Post Graduate Industry Experience Winner</strong>. Additionally, I completed a Bachelor's degree in Commerce from Monash University and passed the <strong>Financial Risk Manager (FRM) Part I</strong> and <strong>Chartered Financial Analyst (CFA) Level II</strong> exams.
+                    </p>
                 </div>
             </div>
         </Fragment>

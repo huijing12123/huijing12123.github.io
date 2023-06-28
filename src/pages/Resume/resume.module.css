@@ -40,6 +40,7 @@
 .wrapper .insideBox {
   width: 80%;
   height: auto;
+  position: relative;
 }
 .slideInLeft {
   animation-name: slideInLeft;

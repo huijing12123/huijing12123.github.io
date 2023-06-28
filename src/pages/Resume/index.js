@@ -51,7 +51,7 @@ function Resume() {
             <div className={styles.wrapper}>
                 <div className={`${styles.navigation} ${styles.slideInLeft}`}>
                     <TitleAndImage
-                        title="Personality"
+                        title="MBTI"
                         imgSrc={xiaohua}
                         onClick={() => handleComponentClick('personality')} />
                     <TitleAndImage
