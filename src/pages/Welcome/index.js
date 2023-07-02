@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 
 
@@ -12,17 +13,6 @@ import meImage from '../../common/images/me_remove.png';
 import circle from '../../common/images/Ellipse.png';
 
 function Welcome() {
-    // const [scale, setScale] = useState(1);
-    // useEffect(() => {
-    //     const interval = setInterval(() => {
-    //         setScale((prevScale) => (prevScale === 1 ? 1.2 : 1));
-    //     }, 1000);
-
-    //     return () => {
-    //         clearInterval(interval);
-    //     };
-    // }, []);
-
     const [isHovered, setIsHovered] = useState(false);
     const handleMouseEnter = () => {
         setIsHovered(true);
@@ -67,7 +57,7 @@ function Welcome() {
                         </svg>
                     </div>
                 )}
-               
+
                 <div className={styles.intro}>
                     <p className={styles.introTitle}>Hi~ I am Hanna </p>
                     <div className={styles.skillSwaper}>
@@ -88,5 +78,11 @@ function Welcome() {
         </Fragment>
     );
 }
+
+Welcome.propTypes = {
+    isHovered: PropTypes.bool,
+    handleMouseEnter: PropTypes.func,
+    handleMouseLeave: PropTypes.func
+  };
 
 export default Welcome;

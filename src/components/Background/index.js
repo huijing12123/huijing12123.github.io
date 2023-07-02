@@ -1,28 +1,43 @@
-import React from 'react';
-// import styles from '../Background/background.module.css';
+import React, {useState,useEffect} from 'react';
+
+
 import flower_1 from "../../common/images/flower1.svg"
 import flower_2 from "../../common/images/flower2.svg"
 import flower_3 from "../../common/images/flower3.svg"
 
-const Background = () => {
-    const backgroundImageCount = 40; // 背景图像的数量
-    const backgroundImages = [];
+// 辅助函数：获取指定范围内的随机整数
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
 
-    for (let i = 1; i <= backgroundImageCount; i++) {
-        // const className = `${backgroundImage}${i}`;
+const Background = () => {
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+
+    // 获取实时视口 width & height
+    const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+        setWindowHeight(window.innerHeight);
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+
+        // 在组件卸载时移除事件监听器
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    const backgroundImageCount = 40; // 背景图像的数量
+
+    const backgroundImages = Array.from({ length: backgroundImageCount }, (_, i) => {
         const imageNumber = i % 3 + 1; // 使用取余运算符循环使用3个不同的SVG图像
 
-        let backgroundImage;
-        if (imageNumber === 1) {
-            backgroundImage = `url(${flower_1})`;
-        } else if (imageNumber === 2) {
-            backgroundImage = `url(${flower_2})`;
-        } else if (imageNumber === 3) {
-            backgroundImage = `url(${flower_3})`;
-        }
-        // const backgroundImage = flower_one;
-        const left = getRandomNumber(-100, 1200); // 获取0到100之间的随机数作为left数值
-        const top = getRandomNumber(-700, 700); // 获取0到100之间的随机数作为top数值
+        const backgroundImage = `url(${imageNumber === 1 ? flower_1 : imageNumber === 2 ? flower_2 : flower_3})`;
+
+        const left = getRandomNumber(0, windowWidth-100); // 获取0到100之间的随机数作为left数值
+        const top = getRandomNumber(0, windowHeight-100); // 获取0到100之间的随机数作为top数值
         const style = {
             backgroundImage,
             position: 'absolute', // 设置元素的定位方式为absolute
@@ -34,19 +49,12 @@ const Background = () => {
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             backgroundSize: "cover",
-            
         };
-        backgroundImages.push(
-            <div key={i} style={style}></div>
-        );
-    }
 
-    return <div >{backgroundImages}</div>;
-}
+        return <div key={i} style={style}></div>;
+    });
 
-// 辅助函数：获取指定范围内的随机整数
-function getRandomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min);
+    return <div>{backgroundImages}</div>;
 }
 
 export default Background;

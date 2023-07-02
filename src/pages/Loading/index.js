@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import styles from './loading.module.css';
 
 // 导入所有图片
@@ -29,7 +30,11 @@ function Loading() {
     const [selectedCat, setSelectedCat] = useState(null); // 新增选中猫猫的状态变量
     const [isHovered, setIsHovered] = useState(false);
     const [svgPosition, setSvgPosition] = useState({ x: 0, y: 0 });
-    // const [animationFrameId, setAnimationFrameId] = useState(null);
+
+    // 图片加载错误处理
+    const [error, setError] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
+
 
     useEffect(() => {
         const loadImage = (src) => {
@@ -38,7 +43,11 @@ function Loading() {
                 img.src = src;
 
                 img.onload = () => resolve();
-                img.onerror = (error) => reject(error);
+                img.onerror = (error) => {
+                    setError(true);
+                    setErrorMessage(`Error loading image: ${src}`);
+                    reject(error);
+                };
             });
         };
 
@@ -49,6 +58,8 @@ function Loading() {
                 setImagesLoaded(true);
             } catch (error) {
                 console.error('Error preloading images:', error);
+                setError(true);
+                setErrorMessage('Error loading images. Please try again later.');
             }
         };
 
@@ -67,22 +78,33 @@ function Loading() {
 
     const handleMouseLeave = () => {
         setIsHovered(false);
-        // setSvgPosition({ x: 0, y: 0 });
     };
 
+    // 添加PropTypes检查
+    Loading.propTypes = {
+        // 确保catImages是一个数组
+        catImages: PropTypes.arrayOf(
+            PropTypes.shape({
+                name: PropTypes.string.isRequired,
+                image: PropTypes.string.isRequired
+            })
+        ).isRequired
+    };
 
     return (
         <Fragment>
-            {imagesLoaded ? (
+            {error ? (
+                <div className={styles.error}>{errorMessage}</div>
+            ) : imagesLoaded ? (
                 <div className={styles.wrapper}>
                     <div className={styles._title}>Meet my whiskered darlings ~</div>
                     <div className={styles.container}>
                         <div className={styles.catsBox}>
-                            {catImages.map((cat, index) => (
+                            {catImages.map((cat) => (
                                 <div
                                     className={styles.box}
-                                    key={index}
-                                    style={{ transform: `rotate(-${cat.rotation}deg)` }}
+                                    key={cat.name}
+
 
                                 >
                                     <img
@@ -93,7 +115,7 @@ function Loading() {
                                         alt={cat.name}
                                         onClick={() => handleCatClick(cat)
 
-                                        } // 添加点击事件处理程序
+                                        }
                                     />
                                     {isHovered && (
                                         <div className={styles.svgContainer} style={{ left: svgPosition.x, top: svgPosition.y }}>
@@ -117,7 +139,6 @@ function Loading() {
                     <p>Loading...</p>
                 </div>
             )}
-
             {selectedCat && (
                 <div className={styles.popupOverlay}>
                     <div className={styles.popup}>
@@ -126,7 +147,6 @@ function Loading() {
                                 className={styles.popupImage}
                                 alt={selectedCat.name}
                             />
-                            {/* <div className={styles.popupName}>{selectedCat.name}</div> */}
 
                         </div>
                         <span className={styles.closeButton} onClick={() => setSelectedCat(null)}>

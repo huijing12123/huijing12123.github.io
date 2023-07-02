@@ -26,18 +26,19 @@ function Education() {
         { year: 2021, content: "CFA level 2 (passed)", image: _2021, aspectRatio: "1234/883" },
         { year: 2022, content: "Post Graduate Industry Experience Winner", image: _2022, aspectRatio: "1080/1080" },
         { year: 2023, content: "Graduated from Monash University in 2023 with a degree in Information Technology", image: graduate, aspectRatio: "1250/1250" },
-        // { year: -2019, content: "Graduated from Monash University with a Bachelor of Commerce degree", image: bear, aspectRatio: "543/460" },
     ];
 
+    const delay = 300; // 设置延迟时间
 
     const handleLeftSwipe = debounce(() => {
         setCurrentIndex((prevIndex) => (prevIndex === 0 ? data.length - 1 : prevIndex - 1));
-    }, 300); // Adjust the debounce delay as per your needs
+    }, delay); // Adjust the debounce delay as per your needs
 
     const handleRightSwipe = debounce(() => {
         setCurrentIndex((prevIndex) => (prevIndex === data.length - 1 ? 0 : prevIndex + 1));
 
-    }, 300); // Adjust the debounce delay as per your needs
+    }, delay); // Adjust the debounce delay as per your needs
+
 
 
 
@@ -68,7 +69,7 @@ function Education() {
             </div>
 
             <div style={{ display: "flex", flexDirection: "row", alignItems: "center" }}>
-                <div className={styles.svgHoverStyle} onClick={handleLeftSwipe}>
+                <div className={styles.svgHoverStyle} onClick={handleLeftSwipe(delay)}>
                     <span>
                         <svg
                             t="1687334358999"
@@ -156,7 +157,7 @@ function Education() {
                         </div>
                     </div>
                 </div>
-                <div className={styles.svgHoverStyle} onClick={handleRightSwipe}>
+                <div className={styles.svgHoverStyle} onClick={handleRightSwipe(delay)}>
                     <span>
                         <svg
                             t="1687334829497"

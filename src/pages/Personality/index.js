@@ -1,7 +1,38 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 import styles from "../Personality/personality.module.css"
 
+
 function Personality() {
+
+    const Box = ({ title, subtitle, content }) => (
+        <div className={[styles._box, styles[`_box${title}`]].join(" ")}>
+            <div className={styles._boxTitle}>{title}</div>
+            <div className={styles._boxTitle} style={{ fontSize: "14px" }}>{subtitle}</div>
+            <div className={styles._boxSvg}>
+                <span>
+                    <svg t="1687150551436" className="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5164" width="100" height="100">
+                        <text x="50%" y="20%" dominantBaseline="middle" textAnchor="middle" style={{ fontSize: '200px', fontWeight: "bold", fill: "#fffffe" }}>
+                            88%
+                        </text>
+                        <path d="M277.9 406.7L159.2 612.4c-41.3-14.5-71.1-53.9-71.1-99.9 0-29.1 11.9-55.6 31.1-74.7 19.2-19.2 45.6-31.1 74.7-31.1h84zM415.4 406.7L293.1 618.3h-61l122.2-211.6zM552.9 406.7L430.6 618.3h-61l122.2-211.6z" fill="#fffffe" p-id="5165">
+                        </path>
+                        <path d="M828.8 641.5H193.9c-71.1 0-129-57.9-129-129s57.9-129 129-129h634.9c71.1 0 129 57.9 129 129s-57.9 129-129 129zM193.9 429.8c-45.6 0-82.7 37.1-82.7 82.7s37.1 82.7 82.7 82.7h634.9c45.6 0 82.7-37.1 82.7-82.7s-37.1-82.7-82.7-82.7H193.9z" fill="#fffffe" p-id="5166">
+                        </path>
+                    </svg>
+                </span>
+            </div>
+            <div className={styles._boxPara}>
+                <p>{content}</p>
+            </div>
+        </div>
+    );
+    Box.propTypes = {
+        title: PropTypes.string.isRequired,
+        subtitle: PropTypes.string.isRequired,
+        content: PropTypes.string.isRequired,
+    };
+
     return (
         <Fragment>
             <div className={styles.wrapper}>
@@ -19,109 +50,34 @@ function Personality() {
                     </div>
                 </div>
                 <div className={styles.contentBox}>
-                    <div className={[styles._box, styles._boxNature].join(" ")}  >
-                        <div className={styles._boxTitle}>NATURE</div>
-                        <div className={styles._boxTitle} style={{ fontSize: "14px" }}>FEELING</div>
-                        <div className={styles._boxSvg}>
-                            <span>
-                                <svg t="1687150551436" className="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5164" width="100" height="100">
-                                    <text x="50%" y="20%" dominantBaseline="middle" textAnchor="middle" style={{ fontSize: '200px', fontWeight: "bold", fill: "#fffffe" }}>
-                                        88%
-                                    </text>
-                                    <path d="M277.9 406.7L159.2 612.4c-41.3-14.5-71.1-53.9-71.1-99.9 0-29.1 11.9-55.6 31.1-74.7 19.2-19.2 45.6-31.1 74.7-31.1h84zM415.4 406.7L293.1 618.3h-61l122.2-211.6zM552.9 406.7L430.6 618.3h-61l122.2-211.6z" fill="#fffffe" p-id="5165">
-                                    </path>
-                                    <path d="M828.8 641.5H193.9c-71.1 0-129-57.9-129-129s57.9-129 129-129h634.9c71.1 0 129 57.9 129 129s-57.9 129-129 129zM193.9 429.8c-45.6 0-82.7 37.1-82.7 82.7s37.1 82.7 82.7 82.7h634.9c45.6 0 82.7-37.1 82.7-82.7s-37.1-82.7-82.7-82.7H193.9z" fill="#fffffe" p-id="5166">
-                                    </path>
-                                </svg>
-                            </span>
-                        </div>
-                        <div className={styles._boxPara}>
-                        {/* You’re mostly Feeling. Mostly Feeling. Likely values emotional expression and sensitivity, prioritizing empathy, social harmony, and cooperation. */}
-                            <p>Mostly Feeling. <br></br>
-                            Likely values emotional expression and sensitivity, prioritizing empathy, social harmony, and cooperation.
-                            </p>
-                        </div>
-                    </div>
-                    <div className={[styles._box, styles._boxTactic].join(" ")} >
-                        <div className={styles._boxTitle}>TACTIC</div>
-                        <div className={styles._boxTitle} style={{ fontSize: "14px" }}>JUDGING</div>
-                        <div className={styles._boxSvg}>
-                            <span>
-                                <svg t="1687150551436" className="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5164" width="100" height="100">
-                                    <text x="50%" y="20%" dominantBaseline="middle" textAnchor="middle" style={{ fontSize: '200px', fontWeight: "bold", fill: "#fffffe" }}>
-                                        88%
-                                    </text>
-                                    <path d="M277.9 406.7L159.2 612.4c-41.3-14.5-71.1-53.9-71.1-99.9 0-29.1 11.9-55.6 31.1-74.7 19.2-19.2 45.6-31.1 74.7-31.1h84zM415.4 406.7L293.1 618.3h-61l122.2-211.6zM552.9 406.7L430.6 618.3h-61l122.2-211.6z" fill="#fffffe" p-id="5165">
-                                    </path>
-                                    <path d="M828.8 641.5H193.9c-71.1 0-129-57.9-129-129s57.9-129 129-129h634.9c71.1 0 129 57.9 129 129s-57.9 129-129 129zM193.9 429.8c-45.6 0-82.7 37.1-82.7 82.7s37.1 82.7 82.7 82.7h634.9c45.6 0 82.7-37.1 82.7-82.7s-37.1-82.7-82.7-82.7H193.9z" fill="#fffffe" p-id="5166">
-                                    </path>
-                                </svg>
-                            </span>
-                        </div>
-                        <div className={styles._boxPara}>
-                            <p>Mostly Judging. <br></br>Likely decisive, thorough, and highly organized. <br></br>Values clarity and prefers planning to spontaneity. </p>
-                        </div>
-                    </div>
-                    <div className={[styles._box, styles._boxEnergy].join(" ")}  >
-                        <div className={styles._boxTitle}>ENERGY</div>
-                        <div className={styles._boxTitle} style={{ fontSize: "14px" }}>OBSERVANT</div>
-                        <div className={styles._boxSvg}>
-                            <span>
-                                <svg t="1687150551436" className="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5164" width="100" height="100">
-                                    <text x="50%" y="20%" dominantBaseline="middle" textAnchor="middle" style={{ fontSize: '200px', fontWeight: "bold", fill: "#fffffe" }}>
-                                        88%
-                                    </text>
-                                    <path d="M277.9 406.7L159.2 612.4c-41.3-14.5-71.1-53.9-71.1-99.9 0-29.1 11.9-55.6 31.1-74.7 19.2-19.2 45.6-31.1 74.7-31.1h84zM415.4 406.7L293.1 618.3h-61l122.2-211.6zM552.9 406.7L430.6 618.3h-61l122.2-211.6z" fill="#fffffe" p-id="5165">
-                                    </path>
-                                    <path d="M828.8 641.5H193.9c-71.1 0-129-57.9-129-129s57.9-129 129-129h634.9c71.1 0 129 57.9 129 129s-57.9 129-129 129zM193.9 429.8c-45.6 0-82.7 37.1-82.7 82.7s37.1 82.7 82.7 82.7h634.9c45.6 0 82.7-37.1 82.7-82.7s-37.1-82.7-82.7-82.7H193.9z" fill="#fffffe" p-id="5166">
-                                    </path>
-                                </svg>
-                            </span>
-                        </div>
-                        <div className={styles._boxPara}>
-                            <p>Mostly Observant.<br></br> Likely pragmatic and down-to-earth, with a strong focus on what is happening or very likely to happen.</p>
-                        </div>
-                    </div>
-                    <div className={[styles._box, styles._boxIdentity].join(" ")}   >
-                        <div className={styles._boxTitle}>IDENTITY</div>
-                        <div className={styles._boxTitle} style={{ fontSize: "14px" }}>TURBULENT</div>
-                        <div className={styles._boxSvg}>
-                            <span>
-                                <svg t="1687150551436" className="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5164" width="100" height="100">
-                                    <text x="50%" y="20%" dominantBaseline="middle" textAnchor="middle" style={{ fontSize: '200px', fontWeight: "bold", fill: "#fffffe" }}>
-                                        88%
-                                    </text>
-                                    <path d="M277.9 406.7L159.2 612.4c-41.3-14.5-71.1-53.9-71.1-99.9 0-29.1 11.9-55.6 31.1-74.7 19.2-19.2 45.6-31.1 74.7-31.1h84zM415.4 406.7L293.1 618.3h-61l122.2-211.6zM552.9 406.7L430.6 618.3h-61l122.2-211.6z" fill="#fffffe" p-id="5165">
-                                    </path>
-                                    <path d="M828.8 641.5H193.9c-71.1 0-129-57.9-129-129s57.9-129 129-129h634.9c71.1 0 129 57.9 129 129s-57.9 129-129 129zM193.9 429.8c-45.6 0-82.7 37.1-82.7 82.7s37.1 82.7 82.7 82.7h634.9c45.6 0 82.7-37.1 82.7-82.7s-37.1-82.7-82.7-82.7H193.9z" fill="#fffffe" p-id="5166">
-                                    </path>
-                                </svg>
-                            </span>
-                        </div>
-                        <div className={styles._boxPara}>
-                            <p>Mostly Turbulent. <br></br> Likely self-conscious, sensitive to stress, success-driven, perfectionistic, and eager to improve.</p>
-                        </div>
-                    </div>
-                    <div className={[styles._box, styles._boxMind].join(" ")} >
-                        <div className={styles._boxTitle}>MIND</div>
-                        <div className={styles._boxTitle} style={{ fontSize: "14px" }}>INTROVERTED</div>
-                        <div className={styles._boxSvg}>
-                            <span>
-                                <svg t="1687150551436" className="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5164" width="100" height="100">
-                                    <text x="50%" y="20%" dominantBaseline="middle" textAnchor="middle" style={{ fontSize: '200px', fontWeight: "bold", fill: "#fffffe" }}>
-                                        88%
-                                    </text>
-                                    <path d="M277.9 406.7L159.2 612.4c-41.3-14.5-71.1-53.9-71.1-99.9 0-29.1 11.9-55.6 31.1-74.7 19.2-19.2 45.6-31.1 74.7-31.1h84zM415.4 406.7L293.1 618.3h-61l122.2-211.6zM552.9 406.7L430.6 618.3h-61l122.2-211.6z" fill="#fffffe" p-id="5165">
-                                    </path>
-                                    <path d="M828.8 641.5H193.9c-71.1 0-129-57.9-129-129s57.9-129 129-129h634.9c71.1 0 129 57.9 129 129s-57.9 129-129 129zM193.9 429.8c-45.6 0-82.7 37.1-82.7 82.7s37.1 82.7 82.7 82.7h634.9c45.6 0 82.7-37.1 82.7-82.7s-37.1-82.7-82.7-82.7H193.9z" fill="#fffffe" p-id="5166">
-                                    </path>
-                                </svg>
-                            </span>
-                        </div>
-                        <div className={styles._boxPara}>
-                            <p> Mostly Introverted.<br></br> Likely prefers fewer, yet deep and meaningful, social interactions and feels drawn to calmer environments. </p>
-                        </div>
-                    </div>
+                    <Box
+                        title="Nature"
+                        subtitle="FEELING"
+                        content="Mostly Feeling.Likely values emotional expression and sensitivity, prioritizing empathy, social harmony, and cooperation."
+
+                    />
+                    <Box
+                        title="Tactic"
+                        subtitle="JUDGING"
+                        content="Mostly Judging.Likely decisive, thorough, and highly organized.Values clarity and prefers planning to spontaneity. "
+
+                    />
+                    <Box
+                        title="Energy"
+                        subtitle="OBSERVANT"
+                        content="Mostly Observant. Likely pragmatic and down-to-earth, with a strong focus on what is happening or very likely to happen."
+
+                    />
+                    <Box
+                        title="Identity"
+                        subtitle="TURBULENT"
+                        content="Mostly Turbulent. Likely self-conscious, sensitive to stress, success-driven, perfectionistic, and eager to improve."
+                    />
+                    <Box
+                        title="Mind"
+                        subtitle="INTROVERTED"
+                        content="Mostly Introverted. Likely prefers fewer, yet deep and meaningful, social interactions and feels drawn to calmer environments. "
+                    />
                 </div>
             </div>
 

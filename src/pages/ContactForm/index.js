@@ -1,33 +1,24 @@
 import React from 'react';
-
-import styles from "./ContactForm.module.css"
-
+import styles from "./ContactForm.module.css";
 import { useForm, ValidationError } from '@formspree/react';
 
-// import axios from 'axios';
-
-
-
-
-
 function ContactForm() {
-
-
     const [state, handleSubmit] = useForm("xnqkabpj");
+
     if (state.succeeded) {
-        return <div style={{ width: "100%", height: "500px", display: "flex", justifyContent: "center", alignItems: "center" }}>
-            <p style={{ color: "#fffffe", fontSize: "40px", fontWeight: "900" }}>Thank you for your message!</p>
-        </div>;
+        return (
+            <div style={{ width: "100%", height: "500px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+                <p style={{ color: "#fffffe", fontSize: "40px", fontWeight: "900" }}>Thank you for your message!</p>
+            </div>
+        );
     }
-
-
 
     return (
         <div className={styles.wrapper}>
             <form onSubmit={handleSubmit} className={styles.formWrapper} action="https://formspree.io/f/xnqkabpj" method='POST'>
-                <label>
+                <label htmlFor="email">
                     Email:
-                    <br></br>
+                    <br/>
                     <input
                         id="email"
                         type="email"
@@ -39,9 +30,9 @@ function ContactForm() {
                         errors={state.errors}
                     />
                 </label>
-                <label>
+                <label htmlFor="message">
                     Message:
-                    <br></br>
+                    <br/>
                     <textarea
                         id="message"
                         name="message"
@@ -57,10 +48,8 @@ function ContactForm() {
                 <button style={{ fontFamily: "Comic Sans MS", fontWeight: "800" }} type="submit" disabled={state.submitting}>
                     Submit
                 </button>
-
             </form>
         </div>
-
     );
 }
 

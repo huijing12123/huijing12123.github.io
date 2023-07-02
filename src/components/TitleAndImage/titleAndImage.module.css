@@ -1,0 +1,21 @@
+.titleAndImg {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-bottom: 40px;
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
+  background-color: #232649;
+}
+.titleAndImg .titleBox {
+  z-index: 200;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.titleAndImg .imgBox img {
+  width: 50px;
+  aspect-ratio: 1/1;
+}
+.titleAndImg .imgBox img:hover {
+  transform: scale(3);
+  cursor: pointer;
+}

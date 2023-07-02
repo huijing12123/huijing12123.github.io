@@ -1,11 +1,5 @@
 import React, { useState } from 'react';
-
-
 import { saveAs } from 'file-saver';
-
-
-
-
 import {
     useTransition,
     useSpring,
@@ -15,13 +9,9 @@ import {
     useSpringRef,
 } from '@react-spring/web';
 import AnimatedContainer from '../../components/AnimatedContainer';
-import resume from '../../common/files/HannaWong_MonashUniversity_2022.pdf'
-
+import resume from '../../common/files/HannaWong_MonashUniversity_2022.pdf';
 
 import styles from './project.module.css';
-
-
-
 
 
 function Project() {
@@ -50,7 +40,7 @@ function Project() {
         to: {
             size: openGrosaver ? '100%' : '80%',
             background: openGrosaver ? 'white' : '#eebbc3',
-            // transition:"0.5s"
+           
         },
     });
 
@@ -165,15 +155,12 @@ function Project() {
         setOpenInternship(false);
         setOpenPersonal(false);
     };
-
     const togglePersonal = () => {
         setOpenPersonal((prevOpenPersonal) => !prevOpenPersonal);
         setOpenGrosaver(false);
         setOpenInternship(false);
         setOpenAnalyse(false);
     };
-
-
     // 第一个动画序列
     useChain(
         openPersonal && !openAnalyse && !openInternship
@@ -205,13 +192,9 @@ function Project() {
             : [transApiPersonal, springApiPersonal],
         [0, openPersonal ? 0.1 : 0.6]
     );
-
-
-
-
     return (
         <div className={styles.wrapper}>
-             <button style={{ width: "25%", backgroundColor: "#fffffe", color: "#121629", fontSize: "18px", marginBottom: "10px", fontFamily: "Comic Sans MS", fontWeight: "800", boxShadow: "8px 8px 10px rgba(0, 0, 0, 0.2)" }} onClick={handleDownload}>Download resume</button>
+            <button style={{ width: "25%", backgroundColor: "#fffffe", color: "#121629", fontSize: "18px", marginBottom: "10px", fontFamily: "Comic Sans MS", fontWeight: "800", boxShadow: "8px 8px 10px rgba(0, 0, 0, 0.2)" }} onClick={handleDownload}>Download resume</button>
             <AnimatedContainer rest={rest} size={size} onClick={toggleGrosaver}>
                 <div className={styles.animationContainerOne} style={{ color: '#fffffe', fontWeight: '900' }}>Website Development Project: "Grosaver"</div>
                 {transition((style, item) => (
@@ -264,7 +247,6 @@ function Project() {
                     </animated.div>
                 ))}
             </AnimatedContainer>
-
             <AnimatedContainer rest={restInternship} size={sizeInternship} onClick={toggleInternship}>
                 <div className={styles.animationContainerTwo} style={{ color: '#fffffe', fontWeight: '900' }}>XIANGCAI SECURITIES CO., LTD. Quantitative Investment Department</div>
                 {transitionInternship((style, item) => (
@@ -291,7 +273,6 @@ function Project() {
                     </animated.div>
                 ))}
             </AnimatedContainer>
-
             <AnimatedContainer rest={restAnalyse} size={sizeAnalyse} onClick={toggleAnalyse}>
                 <div className={styles.animationContainerThree} style={{ color: '#fffffe', fontWeight: '900' }}>Business Analysis Experience</div>
                 {transitionAnalyse((style, item) => (
@@ -322,7 +303,6 @@ function Project() {
                     </animated.div>
                 ))}
             </AnimatedContainer>
-
             <AnimatedContainer rest={restPersonal} size={sizePersonal} onClick={togglePersonal}>
                 <div className={styles.animationContainerFour} style={{ color: '#fffffe', fontWeight: '900' }}>Personal Website</div>
                 {transitionPersonal((style, item) => (
@@ -360,8 +340,6 @@ function Project() {
                     </animated.div>
                 ))}
             </AnimatedContainer>
-           
-
         </div>
     );
 }
