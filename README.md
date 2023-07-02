@@ -2,20 +2,14 @@
 
 This project was designed to 
 ## Project intro
-网站旨在协助澳大利亚低收入家庭在有限预算内保持更健康的饮食。实现了预算计算器、营养教育和种植新鲜农产品的园艺技巧等功能。在项目初期使用WordPress进行了协作开发，后期独立运用Vue.js技术栈进行复刻。获得研究生行业实践奖认可（Post Graduate Industry Experience Winner）
-### 主要成就：
-1. 利用Vue.js技术栈进行开发，独立复制并优化了GroSaver项目的所有功能。
-2. 运用Vue指令、事件处理、计算属性和节流函数，打造了响应式和交互式的自动轮播图功能。
-3. 整合Leaflet库，配合后端API，实现了展示交互式地图的功能，包括地图数据加载、标记点和区域绘制。
-4. 开发了饮食预算计算器，根据用户选择的饮食方案和输入的参数，计算总预算和优化后的预算。
-5. 使用Vue.js和AWS Amplify实现了用户注册表单和身份验证功能。
-6. 运用Express.js、JWT、MySQL、CORS、Vue.js、Vuex和Vue Router等技术，构建了完整的用户身份验证和数据管理系统。
-7. 管理支出数据，将其记录并存储于AWS DynamoDB，提供了线性图表的可视化功能和基于日期的查询功能。
-8. 开发了多个组件，包括分页组件、具有排序、搜索和分页功能的动态表格组件、使用放大镜效果的图片放大组件，以及用于控制导航栏可见性的弹出组件。
-### 技术栈：
-1. 前端：Vue.js、CSS、JavaScript、HTML、Leaflet库
-2. 后端：Express.js、JWT、MySQL、CORS
-3. 其他工具：AWS Amplify、AWS DynamoDB、Chart.js、Canvas
+使用React框架开发的个人网站，用于展现个人教育背景以及开发项目。
+
+### 技术栈 & 主要成就
+React：利用React框架构建组件，利用函数组件和Hooks API实现动态交互和状态管理。
+JavaScript：使用JavaScript和ES6语法实现逻辑和辅助函数，包括防抖函数和动画效果。
+React Spring：集成React Spring库实现动画和过渡效果。
+React Router：使用React Router库实现路由和导航功能，通过Link组件创建导航链接。
+Formspree的联系表单组件：利用React Hooks和表单验证功能实现了表单提交和提交成功信息的显示。
 
 ## Codereview 
 
