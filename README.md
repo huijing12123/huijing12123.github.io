@@ -5,11 +5,11 @@ This project was designed to
 使用React框架开发的个人网站，用于展现个人教育背景以及开发项目。
 
 ### 技术栈 & 主要成就
-React：利用React框架构建组件，利用函数组件和Hooks API实现动态交互和状态管理。
-JavaScript：使用JavaScript和ES6语法实现逻辑和辅助函数，包括防抖函数和动画效果。
-React Spring：集成React Spring库实现动画和过渡效果。
-React Router：使用React Router库实现路由和导航功能，通过Link组件创建导航链接。
-Formspree的联系表单组件：利用React Hooks和表单验证功能实现了表单提交和提交成功信息的显示。
+1. React：利用React框架构建组件，利用函数组件和Hooks API实现动态交互和状态管理。
+2. JavaScript：使用JavaScript和ES6语法实现逻辑和辅助函数，包括防抖函数和动画效果。
+3. React Spring：集成React Spring库实现动画和过渡效果。
+4. React Router：使用React Router库实现路由和导航功能，通过Link组件创建导航链接。
+5. Formspree的联系表单组件：利用React Hooks和表单验证功能实现了表单提交和提交成功信息的显示。
 
 ## Codereview 
 
