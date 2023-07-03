@@ -51,5 +51,6 @@
   "repository": "localhost:3000",
   "author": "Jing12123 <418274909@qq.com>",
   "license": "MIT",
-  "proxy": "http://localhost:5000"
+  "proxy": "http://localhost:5000",
+  "homepage": "https://your-username.github.io"
 }
