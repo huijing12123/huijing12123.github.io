@@ -62,6 +62,7 @@ Warning: Failed prop type: The prop `selectedComponent` is marked as required in
 1.  JSX ：使用自闭合标签（self-closing tag）来闭合没有子元素的标签
 	1. <br/>
 2. 在 `<label>` 元素中，使用 `htmlFor` 属性来关联 `<input>` 元素的 id, 提升可访问性。
+3. 将敏感信息存储在环境变量中
 
 ### background component
 1. 在循环生成背景图像时，使用了条件（三元）运算符来简化选择背景图像的逻辑。这样可以避免使用多个 `if-else` 分支。

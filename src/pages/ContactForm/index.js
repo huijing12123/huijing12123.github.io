@@ -2,7 +2,7 @@ import React from 'react';
 import styles from "./ContactForm.module.css";
 import { useForm, ValidationError } from '@formspree/react';
 
-const formUrl = process.env.FORM_URL; // 引用环境变量
+const formUrl = process.env.REACT_APP_FORM_KEY; // 引用环境变量
 
 
 
@@ -20,7 +20,7 @@ function ContactForm() {
 
     return (
         <div className={styles.wrapper}>
-            <form onSubmit={handleSubmit} className={styles.formWrapper} action={`https://formspree.io/f/${formKey}`} method='POST'>
+            <form onSubmit={handleSubmit} className={styles.formWrapper} action={`https://formspree.io/f/${formUrl}`} method='POST'>
                 <label htmlFor="email">
                     Email:
                     <br />
