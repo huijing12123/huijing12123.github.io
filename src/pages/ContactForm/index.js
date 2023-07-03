@@ -2,8 +2,13 @@ import React from 'react';
 import styles from "./ContactForm.module.css";
 import { useForm, ValidationError } from '@formspree/react';
 
+const formUrl = process.env.FORM_URL; // 引用环境变量
+
+
+
 function ContactForm() {
-    const [state, handleSubmit] = useForm("xnqkabpj");
+    const [state, handleSubmit] = useForm(formUrl);
+
 
     if (state.succeeded) {
         return (
@@ -15,10 +20,10 @@ function ContactForm() {
 
     return (
         <div className={styles.wrapper}>
-            <form onSubmit={handleSubmit} className={styles.formWrapper} action="https://formspree.io/f/xnqkabpj" method='POST'>
+            <form onSubmit={handleSubmit} className={styles.formWrapper} action={`https://formspree.io/f/${formKey}`} method='POST'>
                 <label htmlFor="email">
                     Email:
-                    <br/>
+                    <br />
                     <input
                         id="email"
                         type="email"
@@ -32,7 +37,7 @@ function ContactForm() {
                 </label>
                 <label htmlFor="message">
                     Message:
-                    <br/>
+                    <br />
                     <textarea
                         id="message"
                         name="message"
