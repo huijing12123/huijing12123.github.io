@@ -1,0 +1,89 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    // position: fixed;
+    flex-direction: row;
+    // align-items: center;
+    width: 1000px;
+    margin: auto;
+
+
+    .navigation {
+        display: flex;
+        flex-direction: column;
+
+        width: 1000px;
+        color: #fffffe;
+        font-size: 26px;
+        font-weight: 800;
+        // margin-top: 5px;
+        width: 20%;
+        padding: 10px;
+        z-index: 1000;
+
+        // .titleAndImg {
+        //     display: flex;
+        //     flex-direction: row-reverse;
+        //     align-items: center;
+        //     align-items: center;
+        //     // width: 25%;
+        //     margin-bottom: 40px;
+        //     // border: solid 8px #fffffe;
+        //     box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
+        //     background-color: #232649;
+
+
+        //     .titleBox {
+        //         // margin-bottom: 5px;
+        //         z-index: 200;
+        //         margin-right: 10px;
+        //         margin-left: 10px;
+        //     }
+
+
+        //     .imgBox {
+
+        //         img {
+        //             width: 50px;
+        //             aspect-ratio: 1/1;
+
+        //         }
+
+        //         img:hover {
+        //             // 动画效果 放大
+        //             transform: scale(3);
+
+        //             cursor: pointer;
+        //         }
+        //     }
+        // }
+    }
+
+    .insideBox {
+        // background-color: #fffffe;
+        width: 80%;
+        height: auto;
+        position: relative;
+
+        // border: solid 10px #eebbc3;
+        // z-index: 100;
+    }
+}
+
+.slideInLeft {
+    animation-name: slideInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

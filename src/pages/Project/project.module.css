@@ -1,0 +1,38 @@
+.wrapper {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 60px;
+}
+.wrapper .animationContainerOne {
+  animation: fadeIn 1s ease-in-out;
+}
+.wrapper .animationContainerTwo {
+  animation: fadeIn 1.5s ease-in-out;
+}
+.wrapper .animationContainerThree {
+  animation: fadeIn 2s ease-in-out;
+}
+.wrapper .animationContainerFour {
+  animation: fadeIn 2.5s ease-in-out;
+}
+.item {
+  font-size: 16px;
+}
+.item p {
+  font-size: 26px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    scale: 1.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+button:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,194 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    flex-direction: column;
+    // position: relative;
+    color: #fffffe;
+    padding: 10px;
+
+    // animation: fadeIn 1s ease-in-out;
+
+
+    .titleBox {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        margin-bottom: 20px;
+
+        ._title {
+            font-size: 26px;
+            font-weight: 800;
+            // background-color: #b8c1ec;
+            // border: solid 10px #eebbc3;
+            box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
+            margin-left: 20px;
+            padding: 5px;
+            background-color: #232649;
+
+        }
+
+        ._link {
+            font-size: 16px;
+            // background-color: #eebbc3;
+            padding: 5px;
+            margin-right: 20px;
+            box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
+            background-color: #232649;
+
+
+            a {
+                text-decoration: none;
+                color: #fffffe;
+            }
+        }
+
+
+    }
+
+    .contentBox {
+        width: 100%;
+        height: auto;
+        display: block;
+        position: relative;
+        // flex-direction: row;
+        // justify-content: space-between;
+
+        ._box {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            padding: 10px;
+            width: 25%;
+            aspect-ratio: 0.9;
+            // background-color: #eebbc3;
+            box-shadow: 8px 8px 8px 10px rgba(0, 0, 0, 0.2);
+            // border: solid 5px #fffffe;
+
+            ._boxTitle {
+                height: auto;
+                font-size: 20px;
+                font-weight: 900;
+                display: inline-block;
+                border: solid 5px #fffffe;
+                margin-bottom: 10px;
+                box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
+
+            }
+
+            ._boxSvg {
+                height: auto;
+                display: inline-block;
+                border: solid 5px #fffffe;
+                margin-bottom: 10px;
+                box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
+
+            }
+
+            ._boxPara {
+                height: auto;
+                font-size: 16px;
+                display: inline-block;
+                text-align: center;
+                /* 设置文字两边对齐 */
+                padding: 10px;
+                border: solid 5px #fffffe;
+                margin-bottom: 10px;
+                box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
+
+                p {
+                    text-align: left;
+                    margin: 0 0;
+                    // white-space: pre-line; /* 保留换行符并根据需要换行 */
+                }
+
+
+            }
+
+        }
+
+        ._box:hover {
+            // 动画效果 放大
+            transform: scale(1.2);
+            transition: transform 0.5s ease;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+    }
+}
+
+._boxNature {
+    top: 10px;
+    left: 20px;
+    background-color: #eebbc3;
+    // border: solid 10px #b8c1ec;
+    animation: fadeIn 0.5s ease-in-out;
+
+}
+
+
+
+._boxTactic {
+    top: 60px;
+    left: 150px;
+    background-color: #b8c1ec;
+    // border: solid 10px #eebbc3;
+    animation: fadeIn 1s ease-in-out;
+
+}
+
+._boxEnergy {
+    top: 40px;
+    left: 250px;
+    background-color: #eebbc3;
+    // border: solid 10px #b8c1ec;
+    animation: fadeIn 1.5s ease-in-out;
+
+}
+
+._boxIdentity {
+    top: 90px;
+    left: 400px;
+    background-color: #b8c1ec;
+    // border: solid 10px #eebbc3;
+    animation: fadeIn 2s ease-in-out;
+
+
+}
+
+._boxMind {
+    top: 10px;
+    right: 20px;
+    background-color: #eebbc3;
+    // border: solid 10px #b8c1ec;
+    animation: fadeIn 2.5s ease-in-out;
+
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* 或者使用百分比 */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

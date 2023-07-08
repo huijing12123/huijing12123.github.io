@@ -1,0 +1,8 @@
+/* 全局背景 #232946 */
+body {
+  background-color: #232946;
+  /* 用于固定盒子，以此为标准 */
+  /* position: relative; */
+  /* 全局字体 */
+  font-family: "Comic Sans MS";
+}

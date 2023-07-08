@@ -1,0 +1,155 @@
+.backBox {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 300px;
+  padding: 40px;
+  background-color: #b8c1ec;
+  border: 10px solid #121629;
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+.backBox .boxContainTitle {
+  left: 0;
+  top: 5px;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  width: 880px;
+  height: 60px;
+  padding: 5px;
+  border-bottom: 10px solid #121629;
+}
+.backBox .boxContainTitle .circleStyle {
+  width: 50px;
+  aspect-ratio: 1/1;
+}
+.backBox .boxContainTitle .titleBox {
+  display: flex;
+  justify-content: center;
+  /* 水平居中 */
+  align-items: center;
+  /* 垂直居中 */
+  position: relative;
+  z-index: 200;
+  width: 100%;
+}
+.backBox .boxContainTitle .titleBox .title {
+  color: #121629;
+  font-size: 60px;
+}
+.backBox .boxContainTitle .titleBox .title .strokeText {
+  /* 外部描边效果*/
+  text-shadow: 8px 0px 0px #eebbc3;
+}
+.frontBox {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 60%;
+  left: 43%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 300px;
+  padding: 40px;
+  background-color: #fffffe;
+  border: 10px solid #121629;
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
+  z-index: 200;
+}
+.frontBox .imgMe {
+  position: relative;
+  width: 80%;
+  aspect-ratio: 618/611;
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
+  background-color: #b8c1ec;
+  border: 10px solid #121629;
+  transition: transform 0.5s ease;
+}
+.frontBox .imgMe:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.frontBox .intro {
+  width: 60%;
+  padding: 10px;
+  background-color: #eebbc3;
+  color: #121629;
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
+  border: 10px solid #121926;
+}
+.frontBox .intro .introTitle {
+  font-size: 26px;
+  font-weight: 900;
+}
+.frontBox .intro .skillSwaper {
+  width: 65%;
+  height: 20px;
+  /* 调整容器高度以适应内容 */
+  background-color: #b8c1ec;
+  border: 5px solid #121926;
+  overflow: hidden;
+  position: relative;
+}
+.frontBox .intro .skillSwaper .swaperContainer {
+  color: #fffffe;
+  position: absolute;
+  white-space: nowrap;
+  animation: scroll 15s linear infinite;
+}
+.frontBox .intro .introBody {
+  font-size: 14px;
+  text-align: justify;
+}
+.svgContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-200%, -200%);
+  z-index: 200;
+}
+.linkImage {
+  display: inline-block;
+  width: 40%;
+  aspect-ratio: 618/611;
+  margin-right: 10px;
+}
+@keyframes slideInLeftBack {
+  0% {
+    transform: translateX(-100%) translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 1;
+  }
+}
+.slideInLeftBack {
+  animation: slideInLeftBack 1.5s ease-in-out forwards;
+}
+@keyframes slideInLeftFront {
+  0% {
+    transform: translateX(-100%) translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-45%) translateY(-50%);
+    opacity: 1;
+  }
+}
+.slideInLeftFront {
+  animation: slideInLeftFront 1.5s ease-in-out forwards;
+}
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}

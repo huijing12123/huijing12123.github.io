@@ -1,0 +1,38 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 1000px;
+  margin: auto;
+}
+.wrapper .navigation {
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+  color: #fffffe;
+  font-size: 26px;
+  font-weight: 800;
+  width: 20%;
+  padding: 10px;
+  z-index: 1000;
+}
+.wrapper .insideBox {
+  width: 80%;
+  height: auto;
+  position: relative;
+}
+.slideInLeft {
+  animation-name: slideInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
